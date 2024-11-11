@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Spikehead : EnemyDamage
+public class Spikehead_UpandDown : EnemyDamage
 {
     [Header("SpikeHead Attributes")]
     [SerializeField] private float speed;
