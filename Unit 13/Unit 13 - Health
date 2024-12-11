@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Health : MonoBehaviour
 {
-    [Header ("Health")]
+    [Header("Health")]
     [SerializeField] private float startingHealth;
     public float currentHealth { get; private set; }
     private Animator anim;
@@ -81,9 +81,10 @@ public class Health : MonoBehaviour
     //Respawn
     public void Respawn()
     {
+        dead = false;
         AddHealth(startingHealth);
         anim.ResetTrigger("die");
-        anim.Play("Idle");
+        anim.Play("idle");
         StartCoroutine(Invunerability());
 
         //Activate all attached component classes
